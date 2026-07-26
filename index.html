@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CclipPath id='heart'%3E%3Cpath d='M32 57L8 33c-7-7-7-18 0-25s18-7 24-1c6-6 17-6 24 1s7 18 0 25L32 57z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23heart)'%3E%3Crect width='64' height='12.8' y='0' fill='%235BCEFA'/%3E%3Crect width='64' height='12.8' y='12.8' fill='%23F5A9B8'/%3E%3Crect width='64' height='12.8' y='25.6' fill='%23FFFFFF'/%3E%3Crect width='64' height='12.8' y='38.4' fill='%23F5A9B8'/%3E%3Crect width='64' height='12.8' y='51.2' fill='%235BCEFA'/%3E%3C/g%3E%3C/svg%3E">
   <title>transgende.rs</title>
+
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -47,17 +47,18 @@
       width: 100%;
       padding: 0 1rem;
       min-height: 0;
+      overflow: hidden;
     }
 
     .flag-text {
       font-weight: 900;
-      font-size: clamp(3rem, 14vw, 6.5rem);
-      color: #ececec;
+      font-size: clamp(2.1rem, 9vw, 4.8rem);
+      color: #efefef;
       letter-spacing: -0.05em;
       text-align: center;
       margin: 0;
-      line-height: 0.9;
-      max-width: 96%;
+      line-height: 0.95;
+      max-width: 94%;
       white-space: normal;
       overflow-wrap: anywhere;
       text-wrap: balance;
@@ -65,7 +66,7 @@
 
     .links-container {
       display: flex;
-      gap: 1rem;
+      gap: 0.75rem;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
@@ -77,17 +78,19 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 56px;
-      min-width: 56px;
+      min-height: 48px;
+      min-width: 48px;
       font-weight: 800;
-      font-size: clamp(1.3rem, 5.8vw, 2rem);
-      color: #fff;
+      font-size: clamp(0.95rem, 4.2vw, 1.4rem);
+      color: #4b4b4b;
       text-decoration: none;
-      padding: 1.1rem 1.6rem;
-      background: rgba(255, 255, 255, 0.28);
-      border-radius: 16px;
-      transition: background 0.2s ease, transform 0.2s ease;
-      white-space: normal;
+      padding: 0.85rem 1.2rem;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      border-radius: 14px;
+      box-shadow: none;
+      transition: transform 0.2s ease, background 0.2s ease;
+      white-space: nowrap;
       text-align: center;
       line-height: 1.05;
       touch-action: manipulation;
@@ -95,8 +98,8 @@
     }
 
     .flag-link:hover {
-      background: rgba(255, 255, 255, 0.45);
-      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 1);
+      transform: translateY(-1px);
     }
 
     .flag-link:active {
@@ -112,9 +115,9 @@
       bottom: 0.75rem;
       left: 50%;
       transform: translateX(-50%);
-      font-size: clamp(0.85rem, 3.2vw, 1.1rem);
+      font-size: clamp(0.8rem, 3vw, 1rem);
       font-weight: 600;
-      color: rgba(255, 255, 255, 0.85);
+      color: rgba(255, 255, 255, 0.9);
       text-align: center;
       white-space: nowrap;
       pointer-events: none;
@@ -126,30 +129,28 @@
       }
 
       .flag-text {
-        font-size: clamp(3.6rem, 16vw, 5.6rem);
+        font-size: clamp(2.2rem, 10vw, 3.8rem);
       }
 
       .links-container {
         flex-direction: column;
-        gap: 1.1rem;
+        gap: 0.7rem;
       }
 
       .flag-link {
-        width: min(100%, 390px);
-        font-size: clamp(1.35rem, 6.5vw, 1.85rem);
-        padding: 1.2rem 1.5rem;
+        width: min(100%, 280px);
+        font-size: clamp(0.95rem, 4.8vw, 1.2rem);
+        padding: 0.8rem 1rem;
       }
     }
 
     @media (max-width: 360px) {
       .flag-text {
-        font-size: clamp(3.2rem, 15vw, 4.8rem);
+        font-size: clamp(2rem, 9vw, 3.2rem);
       }
 
       .flag-link {
         width: 100%;
-        font-size: 1.3rem;
-        padding: 1.15rem 1.3rem;
       }
     }
   </style>
@@ -164,7 +165,7 @@
     </div>
 
     <div class="stripe">
-      <nav class="links-container" aria-label="links">
+      <nav class="links-container" aria-label="resources">
         <a href="https://glaad.org/transgender/resources/" class="flag-link" target="_blank" rel="noopener">GLAAD</a>
         <a href="https://www.hrc.org/resources/transgender" class="flag-link" target="_blank" rel="noopener">HRC</a>
         <a href="https://www.pointofpride.org/" class="flag-link" target="_blank" rel="noopener">Point of Pride</a>
